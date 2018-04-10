@@ -1,0 +1,19 @@
+{
+  "name": "javascriptcourse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blah.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanelray/JavaScriptCourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanelray/JavaScriptCourse/issues"
+  },
+  "homepage": "https://github.com/chanelray/JavaScriptCourse#readme"
+}
