@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET TaskTracker page. */
 router.get('/tasks', function(req, res) {
-  res.render('task', { title: 'Task Tracker !' });
+  res.render('tasks', { title: 'Task Tracker !' });
 });
 
 module.exports = router;
