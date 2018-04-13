@@ -1,9 +1,15 @@
 extends layout
 
 block content
-    h1= title
-    form#formAddTask(name="addtask",method="post",action="/addtask")
-        input#inputTaskName(type="text", placeholder="taskname", name="taskname")
-        input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
-        button#btnSubmit(type="submit") submit
+    .container
+        #[br]
+        h1= title
+        form#formAddTask(name="addtask",method="post",action="/addtask")
+            input#inputTaskName(type="text", placeholder="taskname", name="taskname")
+            #[br]
+            #[br]
+            input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
+            #[br]
+            #[br]
+            button.btn.btn-outline-primary#btnSubmit(type="submit") submit
 

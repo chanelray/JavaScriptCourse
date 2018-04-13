@@ -11,10 +11,7 @@ router.get('/tasks', function(req, res) {
   res.render('tasks', { title: 'Task Tracker !' });
 });
 
-/* GET New TASK page. */
-router.get('/addtask', function(req, res) {
-  res.render('addtask', { title: 'Add New Task' });
-});
+
 
 /* GET tasklist page. */
 router.get('/tasklist', function(req, res) {
@@ -25,6 +22,11 @@ router.get('/tasklist', function(req, res) {
           "tasklist" : docs
       });
   });
+});
+
+// GET New Task Page //
+router.get("/addtask", function(req,res){
+    res.render("addtask", { title: "Add New Task"});
 });
 
 // POST to Add Task Service //
@@ -42,10 +44,12 @@ router.post('/addtask', function(req, res) {
   var collection = db.get('userCollection');
 
   // Submit to the DB
-  collection.insert({
-      "task" : taskName,
-      "desc" : taskDesc
-  }, function (err, doc) {
+  collection.insert(
+    {
+      task : taskName,
+      description : taskDesc
+    }, 
+    function (err, doc) {
       if (err) {
           // If it failed, return error
           res.send("There was a problem adding the information to the database.");
